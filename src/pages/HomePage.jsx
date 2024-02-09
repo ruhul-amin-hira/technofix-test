@@ -15,7 +15,7 @@ const HomePage = () => {
       .then((data) => {
         if (data) {
           setLoading(false);
-          console.log(data);
+          // console.log(data);
           setUser(data.users);
           setError(false);
         }
