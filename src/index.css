@@ -75,3 +75,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom__hover-view{
+  visibility: hidden;
+  width: 0;
+  transform: translateY(-50%);
+  
+}
+
+.custom__hover-card:hover > .custom__hover-view{
+ visibility: visible;
+ width: auto;
+ transform: translateY(0);
+ transition: all 0.2s ease;
+ 
+}
