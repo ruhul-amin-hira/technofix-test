@@ -3,7 +3,7 @@
 -Overall design
 ![Screenshot](./public/screenshot.png)
 
-## Live linK: [https://ruhul-amin-hira.github.io/ef-test/](https://ruhul-amin-hira.github.io/ef-test/)
+## Live link: [technofix.vercel.app](https://technofix.vercel.app/)
 
 This project was bootstrapped with [Vite](https://vitejs.dev/).
 
