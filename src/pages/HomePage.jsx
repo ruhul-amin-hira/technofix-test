@@ -28,7 +28,7 @@ const HomePage = () => {
       .then((data) => {
         if (data) {
           setLoading(false);
-          // console.log(data);
+          //  console.log("calling...");
           setUser(data.users);
           // setFilterData(data.users)
           setError(false);
@@ -57,6 +57,16 @@ const HomePage = () => {
   }, [search, user, select]);
 
  // console.log(filterData);
+
+
+ const handleSelect = (e) =>{
+  if(e == select){
+    return
+  }
+  setSelect(e)
+ }
+
+
 
   const renderUsers = () => {
     return (
@@ -94,7 +104,7 @@ const HomePage = () => {
         <div>
           <div className="flex items-center">
             <p className="inline-block pr-2 text-nowrap">Sort by</p>
-            <Select onValueChange={(e) => setSelect(e)}>
+            <Select onValueChange={(e) => handleSelect(e) }>
               <SelectTrigger className="md:w-[180px] w-full">
                 <SelectValue placeholder="Name" />
               </SelectTrigger>

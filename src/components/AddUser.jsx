@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import UserForm from './UserForm'
 
 const AddUser = () => {
   return (
@@ -13,7 +14,9 @@ const AddUser = () => {
         <AccordionItem value="item-1">
           <AccordionTrigger>Add a user</AccordionTrigger>
           <AccordionContent>
-            Yes. It adheres to the WAI-ARIA design pattern.
+            <div>
+              <UserForm />
+            </div>
           </AccordionContent>
         </AccordionItem>
       </Accordion>
