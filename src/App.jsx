@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import CardPage from "./pages/CardPage";
 import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/toaster";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path=":id" element={<CardPage />} />
         </Routes>
         <Footer />
+        <Toaster />
       </div>
     </>
   );

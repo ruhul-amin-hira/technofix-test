@@ -2,9 +2,11 @@ import { useRef, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
+import { useToast } from "./ui/use-toast";
 
 const UserForm = () => {
   const fileInputRef = useRef(null);
+  const { toast } = useToast()
 
   const [loading, setLoading] = useState(false)
 
@@ -37,10 +39,19 @@ const UserForm = () => {
       .then((data) =>{
         setLoading(false)
         console.log(data)
+        toast({
+            title: "Sucessfully added!",
+            description: `${data?.lastName} , ${data?.email}`,
+          })
       })
       .catch((e) => {
         setLoading(false)
         console.log(e)
+        toast({
+            variant: "destructive",
+            title: "Uh oh! Something went wrong.",
+            description: "There was a problem with your request.",
+          })
       });
   };
 
