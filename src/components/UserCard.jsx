@@ -11,7 +11,7 @@ import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 
 const UserCard = ({ user }) => {
-  let userName = user.firstName + " " + user.lastName;
+  let userName = user.firstName + " " + user.maidenName + " " + user.lastName;
   return (
     <div className="text-center cursor-pointer">
       <Link to={`/${user.id}`} state={user}>
